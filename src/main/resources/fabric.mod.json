@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "world-manager",
+	"version": "${version}",
+	"name": "World Manager",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/world-manager/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"deklenn.worldmanager.WorldManager"
+		],
+		"client": [
+			"deklenn.worldmanager.WorldManagerClient"
+		]
+	},
+	"mixins": [
+		"world-manager.mixins.json",
+		{
+			"config": "world-manager.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
